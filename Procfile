@@ -1,0 +1,1 @@
+web: TelegramImageBot --port=$PORT
