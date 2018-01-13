@@ -23,6 +23,8 @@ import PerfectHTTPServer
 func mainRoutes() -> [[String: Any]] {
     var routes: [[String: Any]] = [[String: Any]]()
     routes.append(["method":"get", "uri":"/**", "handler":PerfectHTTPServer.HTTPHandler.staticFiles, "documentRoot":"./webroot","allowResponseFilters":true])
+    
+    routes.append(["method":"get", "uri":"", "handler":Handlers.mainInfoGet])
 
     /// List all records
     routes.append(["method":"get", "uri":"/api/v1/person", "handler":Handlers.personGet])
